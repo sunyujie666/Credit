@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Credit"
+  id="myeclipse.1538147405635"
+  context-root="/Credit"
+  j2ee-spec="5.0"
+  archive="Credit.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

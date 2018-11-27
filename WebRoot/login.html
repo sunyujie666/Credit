@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<title>index</title>
+<link
+	href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet" />
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script
+	src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js">
+	
+</script>
+
+<script type="text/javascript">
+
+
+
+//若输入框为空，阻止表单的提交
+function checkSubmit() {
+	var a = document.getElementById("username").value;
+	var b = document.getElementById("password").value;
+	//alert("a: "+a+" b: "+b);
+    if (a && b) { //用户框value值和密码框value值都为空
+         var form = document.getElementById("formid");
+         form.submit();
+    }else{
+        document.getElementById("remind_2").innerHTML = "请正确输入账号和密码！";
+    }
+}
+
+  				
+</script>
+
+<script type="text/javascript" src="../js/index.js"></script>
+</head>
+<body>
+	<form id="formid" class="well"  action="servlets/getCredit" method="post" style="width: 30em; margin: auto; margin-top: 150px;">
+		<h3>用户登录</h3>
+		<div class=" input-group input-group-md">
+			<span class="input-group-addon" id="sizing-addon1"> <i
+				class="glyphicon glyphicon-user"></i> </span> 
+				<input name="username" id="username" type="text" class="form-control"  />
+				
+		</div>
+		<br />
+		<div class="input-group input-group-md">
+			<span class="input-group-addon" id="sizing-addon1"><i
+				class="glyphicon glyphicon-lock"> </i> </span> 
+				<input type="password" id="password" name="password" class="form-control"  />
+				
+		</div>
+		<p id="remind_2"></p>
+		<br> <br>
+		<input type="button"  value="登录" class="btn btn-success btn-block" onclick="checkSubmit()"></button>
+
+	</form>
+</body>
+</html>
+
